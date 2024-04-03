@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Win Percentage Calculator</title>
+    <style>
+        /* Basic CSS for styling */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #result { font-size: 24px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Win Percentage Calculator</h2>
+    <label for="successChance">Enter success chance (%):</label>
+    <input type="number" id="successChance" value="10">
+    <button onclick="checkSuccess()">Check Success</button>
+    <div id="result"></div>
+
+    <script>
+        // JavaScript functionality
+        function checkSuccess() {
+            var successChance = document.getElementById("successChance").value;
+            var result = Math.random() < (successChance / 100) ? "Yes" : "No";
+            document.getElementById("result").textContent = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
